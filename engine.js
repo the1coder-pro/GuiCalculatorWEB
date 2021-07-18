@@ -8,34 +8,17 @@ var result;
 function addValue(btn) {
   
     var resultInput = document.getElementById('calc1');
-   
-    if (btn.value == "+"){
-      numbers.push(resultInput.value);
-
-    } else if (btn.value == "="){
-      numbers.push(resultInput.value);
-      result = +numbers[0] + +numbers[1];
-      console.log(result);
-      resultInput.value += result;
-    }
-
-     resultInput.value += btn.value;
-     if (result != undefined) {
-       resultInput.value = result;
+     if (btn.value == "="){
+       resultInput.value = eval(resultInput.value);
+     }else {
+       resultInput.value += btn.value;
      }
-    //  if (resultInput != NaN){
-
-    //  }
-    //  resultInput.value += resultInput;
-    // console.log(resultInput.value.split('+'));
     
-
-    
-
-
-    // console.log(btn.value);
 }
 
+function clearInput() {
+  document.getElementById('calc1').value = "";
+}
 
 
 function deleteChr() {

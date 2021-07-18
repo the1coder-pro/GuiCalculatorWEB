@@ -10,8 +10,8 @@
   </head>
   <body>
     <!-- hi -->
-    <input type="number" id="calc1" placeholder="0" />
-    <input type="button" id="deletebtn" onclick="deleteChr()" value="<" />
+    <input type="text" id="calc1" placeholder="0" />
+    <input type="button" id="deletebtn" onclick="deleteChr()" ondblclick="clearInput()" value="<" />
     <br />
     <input
       type="button"
@@ -98,7 +98,7 @@
       class="num"
       id="numMul"
       onclick="addValue(this)"
-      value="x"
+      value="*"
     />
     <br />
     <input
