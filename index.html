@@ -4,14 +4,32 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Calculator</title>
     <script src="engine.js"></script>
-    
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
   </head>
+  <style>
+  * {
+    font-family: 'Roboto Mono', monospace;
+    
+  }
+  
+  body {
+    margin: 45px;
+  }
+    
+  </style>
   <body>
     <!-- hi -->
     <input type="text" id="calc1" placeholder="0" />
-    <input type="button" id="deletebtn" onclick="deleteChr()" ondblclick="clearInput()" value="<" />
+    <input type="button" id="deletebtn" onclick="deleteChr()" ondblclick="clearInput()" class="mdc-icon-button material-icons sharp"
+      value="backspace"/>
+
     <br />
     <input
       type="button"
@@ -140,7 +158,10 @@
       #calc1 {
         font-size: 50px;
         width: 246px;
-        margin-bottom: 10px;
+        height: 5px;
+        padding-top: 24px;
+        padding-bottom: 40px;
+        
       }
       .num {
         font-size: 50px;
@@ -150,11 +171,17 @@
       }
       #enter {
         margin-top: 10px;
-        width: 310px;
+        width: 320px;
       }
       #deletebtn {
-        font-size: 50px;
-        width: 50px;
+        font-size: 20px;
+        padding-top: 25px;
+        padding-bottom: 45px;
+        width: 56px;
+        height: 45px;
+        margin-top: 30px;
+        margin-bottom: 10px;
+        text-align: center;
       }
     </style>
   </body>
