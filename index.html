@@ -6,149 +6,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
     <script src="engine.js"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+    <link rel="stylesheet" href="uikit.css" />
+    <script src="uikit.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cousine&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
   </head>
   <style>
-  * {
-    font-family: 'Roboto Mono', monospace;
-    
-  }
-  
-  body {
-    margin: 45px;
-  }
-    
+    * {
+      font-family: "Cousine", monospace;
+    }
+    /* potato */
+
+    body {
+      margin: 45px;
+    }
+
+    .num,
+    #deletebtn,
+    #calc1 {
+      box-shadow: 5px 3px black;
+      background-color: white;
+    }
+
+    .gridViewClass {
+      display: grid;
+      grid-column-gap: 10px;
+      grid-row-gap: 10px;
+      grid-template-columns: 100px 100px 100px;
+    }
+
+    .inputAndDeleteBtn {
+      display: grid;
+
+      grid-column-gap: 10px;
+
+      grid-row-gap: 10px;
+      grid-template-columns: auto auto auto;
+    }
   </style>
   <body>
     <!-- hi -->
-    <input type="text" id="calc1" placeholder="0" />
-    <input type="button" id="deletebtn" onclick="deleteChr()" ondblclick="clearInput()" class="mdc-icon-button material-icons sharp"
-      value="backspace"/>
+    <div class="inputAndDeleteBtn">
+      <input type="text" id="calc1" placeholder="0" />
+      <input
+        type="button"
+        id="deletebtn"
+        onclick="deleteChr()"
+        ondblclick="clearInput()"
+        class="mdc-icon-button material-icons sharp"
+        value="backspace"
+      />
+    </div>
 
-    <br />
-    <input
-      type="button"
-      class="num"
-      onclick="addValue(this)"
-      id="num1"
-      value="1"
-    />
-    <input
-      type="button"
-      class="num"
-      onclick="addValue(this)"
-      id="num2"
-      value="2"
-    />
-    <input
-      type="button"
-      class="num"
-      onclick="addValue(this)"
-      id="num3"
-      value="3"
-    />
-    <br />
-    <input
-      type="button"
-      class="num"
-      onclick="addValue(this)"
-      id="num4"
-      value="4"
-    />
-    <input
-      type="button"
-      class="num"
-      onclick="addValue(this)"
-      id="num5"
-      value="5"
-    />
-    <input
-      type="button"
-      class="num"
-      onclick="addValue(this)"
-      id="num6"
-      value="6"
-    />
-    <br />
-    <input
-      type="button"
-      class="num"
-      onclick="addValue(this)"
-      id="num7"
-      value="7"
-    />
-    <input
-      type="button"
-      class="num"
-      onclick="addValue(this)"
-      id="num8"
-      value="8"
-    />
-    <input
-      type="button"
-      class="num"
-      id="num9"
-      onclick="addValue(this)"
-      value="9"
-    />
-    <br />
-    <input
-      type="button"
-      class="num"
-      id="num0"
-      onclick="addValue(this)"
-      value="0"
-    />
-    <input
-      type="button"
-      class="num"
-      id="numAdd"
-      onclick="addValue(this)"
-      value="+"
-    />
-    <input
-      type="button"
-      class="num"
-      id="numMul"
-      onclick="addValue(this)"
-      value="*"
-    />
-    <br />
-    <input
-      type="button"
-      class="num"
-      id="numDiv"
-      onclick="addValue(this)"
-      value="/"
-    />
-    <input
-      type="button"
-      class="num"
-      id="numSub"
-      onclick="addValue(this)"
-      value="-"
-    />
-    <input
-      type="button"
-      class="num"
-      id="numPoint"
-      onclick="addValue(this)"
-      value="."
-    />
-    <br />
-    <input
-      type="button"
-      class="num"
-      id="enter"
-      onclick="addValue(this)"
-      value="="
-    />
+    <div class="gridViewClass">
+      <button class="num" onclick="addValue(this)" id="num1" value="1">
+        1
+      </button>
 
+      <button class="num" onclick="addValue(this)" id="num2" value="2">
+        2
+      </button>
+
+      <button class="num" onclick="addValue(this)" id="num3" value="3">
+        3
+      </button>
+
+      <button class="num" onclick="addValue(this)" id="num4" value="4">
+        4
+      </button>
+      <button class="num" onclick="addValue(this)" id="num5" value="5">
+        5
+      </button>
+      <button class="num" onclick="addValue(this)" id="num6" value="6">
+        6
+      </button>
+
+      <button class="num" onclick="addValue(this)" id="num7" value="7">
+        7
+      </button>
+
+      <button class="num" onclick="addValue(this)" id="num8" value="8">
+        8
+      </button>
+
+      <button class="num" id="num9" onclick="addValue(this)" value="9">
+        9
+      </button>
+
+      <button class="num" id="num0" onclick="addValue(this)" value="0">
+        0
+      </button>
+
+      <button class="num" id="numAdd" onclick="addValue(this)" value="+">
+        +
+      </button>
+
+      <button class="num" id="numMul" onclick="addValue(this)" value="*">
+        ×
+      </button>
+
+      <button class="num" id="numPoint" onclick="addValue(this)" value=".">
+        .
+      </button>
+
+      <button class="num" id="numDiv" onclick="addValue(this)" value="/">
+        ÷
+      </button>
+
+      <button class="num" id="numSub" onclick="addValue(this)" value="-">
+        -
+      </button>
+
+      <button class="num" id="enter" onclick="addValue(this)" value="=">
+        =
+      </button>
+    </div>
     <p>
       Made with ❤️ by <a href="https://www.instagram.com/_hsn95/">_hsn</a> &
       <a href="https://www.instagram.com/zy.ton/">M7md</a>
@@ -159,15 +141,20 @@
         font-size: 50px;
         width: 246px;
         height: 5px;
-        padding-top: 24px;
-        padding-bottom: 40px;
-        
+        padding-top: 32.5px;
+        padding-bottom: 32.5px;
+
+        margin-bottom: 10px;
+        color: black;
+        /* colooooors */
       }
       .num {
         font-size: 50px;
         width: 100px;
         margin-top: 3px;
         margin-bottom: 3px;
+        vertical-align: middle;
+        color: black;
       }
       #enter {
         margin-top: 10px;
@@ -179,8 +166,8 @@
         padding-bottom: 45px;
         width: 56px;
         height: 45px;
-        margin-top: 30px;
         margin-bottom: 10px;
+
         text-align: center;
       }
     </style>
